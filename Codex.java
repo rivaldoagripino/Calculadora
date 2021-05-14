@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class Codex {
 	Scanner sc = new Scanner(System.in);
 	
@@ -9,7 +10,7 @@ public class Codex {
 			escolha = sc.nextInt();
 			switch(escolha) {
 				case 1:
-					System.out.println("Qual o operador que deseja utilizar?\n[1] - Soma\n[2] - Subtração\n[3] - Divisão\n[4] - Multiplicação");
+					System.out.println("Qual o operador que deseja utilizar?\n[0] - Voltar\n[1] - Soma\n[2] - Subtração\n[3] - Divisão\n[4] - Multiplicação");
 					int op = sc.nextInt();
 					if (op == 1) {
 						System.out.println("Digite o primeiro valor: ");
@@ -39,6 +40,8 @@ public class Codex {
 						int n2 = sc.nextInt();
 						System.out.println("A multiplicação ente " + n1 + " e " + n2 + " é: ");
 						System.out.println(n1 * n2);
+					} else if (op == 0) {
+						continue;
 					} else {
 						System.out.println("Operador inválido. Por favor, selecione um operador válido");
 						continue;
